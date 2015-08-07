@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get to Know Your Hackathon</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <link href="css/cloud-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/map.css" />
+    <link href="css/data.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <!--
+        ██╗  ██╗ █████╗  ██████╗██╗  ██╗████████╗██╗  ██╗    ██╗  ██╗    ██████╗
+        ██║  ██║██╔══██╗██╔════╝██║ ██╔╝╚══██╔══╝╚██╗██╔╝    ██║  ██║   ██╔═████╗
+        ███████║███████║██║     █████╔╝    ██║    ╚███╔╝     ███████║   ██║██╔██║
+        ██╔══██║██╔══██║██║     ██╔═██╗    ██║    ██╔██╗     ╚════██║   ████╔╝██║
+        ██║  ██║██║  ██║╚██████╗██║  ██╗   ██║   ██╔╝ ██╗         ██║██╗╚██████╔╝
+        ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝         ╚═╝╚═╝ ╚═════╝
+      -->
+  </head>
+  <body>
+    <div class="body-div">
+      <section id="skyContainer" class="hero">
+        <div class="container">
+          <div class="clouds">
+            <div class="cloud large cloud-1">
+              <img src="images/cloud1.svg"/>
+            </div>
+            <div class="cloud normal cloud-2">
+              <img src="images/cloud2.svg"/>
+            </div>
+            <div class="cloud v1 small cloud-3">
+              <img src="images/cloud3.svg"/>
+            </div>
+            <div class="cloud v1 tiny cloud-4">
+              <img src="images/cloud4.svg"/>
+            </div>
+            <div class="cloud v2 large cloud-5">
+              <img src="images/cloud4.svg"/>
+            </div>
+            <div class="cloud v1 normal cloud-6">
+              <img src="images/cloud3.svg"/>
+            </div>
+            <div class="cloud v2 small cloud-7">
+              <img src="images/cloud2.svg"/>
+            </div>
+            <div class="cloud v2 tiny cloud-8">
+              <img src="images/cloud1.svg"/>
+            </div>
+            <div class="cloud v1 small cloud-9">
+              <img src="images/cloud4.svg"/>
+            </div>
+            <div class="cloud v2 normal cloud-10">
+              <img src="images/cloud3.svg"/>
+            </div>
+            <div class="cloud v1 tiny cloud-11">
+              <img src="images/cloud2.svg"/>
+            </div>
+            <div class="cloud v2 small cloud-12">
+              <img src="images/cloud1.svg"/>
+            </div>
+          </div>
+          <div class="hero-info row col-xs-8 col-xs-offset-2">
+            <h1>GET TO KNOW YOUR</h1>
+            <h1 class="hacktx-title">HACKATHON</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <div class="about-info row">
+            <p class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">In 2012, TES and Hacker Lounge united to hold one of the first university hackathons at the University of Texas at Austin. Today, HackTX is just one of many communities around the world that inspires students to build, learn, and explore something new using technology.</p>
+            <p class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1"><b>HackTX is a small part of a global community.</b> Since HackTX started in 2012, hackathons have grown at an exponential rate. More and more students are recognizing their desire to explore new skills and technologies. Whether you're learning to build mobile applications, getting your feet wet with Arduinos, exploring an analytical approach to scientific data, or diving into unfamiliar territories with interactive design, hackathons are there to provide the necessary mentorship and collaboration needed to learn and create something new.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+      <div id="map">
+        <div id="menu">
+          <a id="2011" class="button 2011">2011</a>
+          <a id="2012" class="button 2012">2012</a>
+          <a id="2013" class="button 2013">2013</a>
+          <a id="2014" class="button 2014">2014</a>
+          <a id="2015" class="button 2015">2015</a>
+          <a id="all_years" class="button all_years selected">All</a>
+        </div>
+        <div id="layer_selector" class="cartodb-infobox">
+          <ul>
+            <li data="0">Clusters</li>
+            <li data="1" class="selected">Infographics</li>
+            <li data="2">Timeline</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="monthly-hackathons">
+        <svg class="chart"></svg>
+      </div>
+
+      <section class="hackathon-data">
+        <div class="container">
+          <div class="hackathon-data-info">
+            <div class="chart-row">
+              <p class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" style="padding-bottom:2em;text-align:justify">Something inspirational about the number of hackathons growing each year.</p>
+            </div>
+            <div class="chart-row">
+              <p class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" style="padding-bottom:1em;text-align:justify">Something inspirational about the growth of hackathons worldwide, propelling communities in colleges and nations that are otherwise not strong in tech.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hacktx-data">
+        <div class="container">
+          <div class="hacktx-data-info">
+            <h2><b>Some transition about HackTX.</b></h2>
+            <div class="chart-row">
+              <img class="col-md-4 col-sm-12" src="http://i.stack.imgur.com/FbN60.png"/>
+              <p class="col-md-8 col-sm-12">Butcher chillwave pour-over, Williamsburg paleo Truffaut hella artisan mixtape lo-fi literally Echo Park forage freegan Intelligentsia. Twee semiotics freegan craft beer fixie raw denim beard bitters.</p>
+            </div>
+            <div class="chart-row">
+              <p class="col-md-8 col-sm-12" style="text-align: right">Butcher chillwave pour-over, Williamsburg paleo Truffaut hella artisan mixtape lo-fi literally Echo Park forage freegan Intelligentsia. Twee semiotics freegan craft beer fixie raw denim beard bitters.</p>
+              <img class="col-md-4 col-sm-12" src="http://i.stack.imgur.com/FbN60.png"/>
+            </div>
+            <div class="chart-row">
+              <img class="col-md-4 col-sm-12" src="http://i.stack.imgur.com/FbN60.png"/>
+              <p class="col-md-8 col-sm-12">Butcher chillwave pour-over, Williamsburg paleo Truffaut hella artisan mixtape lo-fi literally Echo Park forage freegan Intelligentsia. Twee semiotics freegan craft beer fixie raw denim beard bitters.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hills">
+          <img src="images/hills.png"/>
+        </div>
+      </section>
+      
+      <section class="social-media">
+        <div class="container">
+          <div class="social-media-info">
+            <div class="row">
+              <h2><b>Enjoy the company of passionate students, builders, and mentors.</b></h2>
+              <p style="text-align:center">social media reel and photos</p>
+              <p style="text-align:center">hardware/tools used, links to what people have built at previous HackTX's</p>
+              <p style="text-align:center">People have gotten job offers, made great relationships with recruiters/mentors, etc. Maybe something here 'bout them here, too.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="outro">
+        <div class="container">
+          <div class="outro-info row">
+            <h2>Everyone starts somewhere.</h2>
+            <div style="text-align: center">
+              <div class="quote">
+                <h2>"Yeah I sucked butt"</h2>
+                <h3>- Kev</h3>
+              </div>
+            </div>
+
+            <div style="text-align: center">
+              <div class="quote">
+                <h2>"I used to be nervous but now I'm confident"</h2>
+                <h3>- Bev</h3>
+              </div>
+            </div>
+
+            <div style="text-align: center">
+              <div class="quote">
+                <h2>"Wow such community, very support"</h2>
+                <h3>- Dev</h3>
+              </div>
+            </div>
+
+            <p class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1"><b>Hackathons are more than just a weekend sprint.</b> Hackathons are a growing network of builders and mentors. They're a green light to learn something new and to build anything you desire.</p>
+
+            <p class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">Come build with us, and meet your new community.</p>
+            <p class="co-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">- Team <a href="http://hacktx.com">HackTX</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <div class="contact-info row">
+            <p class="contact-love">MADE WITH &#10084 IN AUSTIN, TX</p>
+            <p class="contact-detail col-xs-8 col-xs-offset-2">HackTX is a student event. Our supporters are supporters of the event and not of the University of Texas.
+              There is no implied endorsement of these companies by the University.</p>
+            <div class="contact-social col-xs-8 col-xs-offset-2">
+              <a href="https://www.facebook.com/HackTX"><i class="fa fa-facebook-official fa-3x"></i></a>
+              <a href="https://twitter.com/hacktx"><i class="fa fa-twitter-square fa-3x"></i></a>
+              <a href="https://github.com/hacktx"><i class="fa fa-github-square fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="chair">
+            <img src="images/chair.png"/>
+          </div>
+        </div>
+      </section>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+      <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+      <script src="js/animate.min.js"></script>
+      <script src="js/clouds.js"></script>
+      <script src="js/map.js" defer></script>
+      <script src="js/monthly-hackathons.js" defer></script>
+</body>
+</html>

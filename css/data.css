@@ -1,0 +1,19 @@
+#monthly-hackathons .chart rect {
+    fill: rgb(6,40,63);
+}
+#monthly-hackathons .chart text {
+    fill: white;
+    font: 10px sans-serif;
+    text-anchor: end;
+}
+
+#monthly-hackathons .chart {
+    background: #f04650;
+    position:absolute;
+    width: 100%;
+}
+
+#monthly-hackathons {
+    position:relative;
+    margin-bottom:420px;
+}

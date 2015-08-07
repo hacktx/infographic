@@ -1,0 +1,426 @@
+/*
+* HackTX IV CSS File
+* http://bit.ly/1ywfhq7
+*/
+
+/* Open Sans Google Font */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+/* Oswald Google Font */
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+
+/* Montserrat Google Font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+::-webkit-input-placeholder {
+  color: #f7f7f7;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #f7f7f7;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #f7f7f7;
+}
+
+:-ms-input-placeholder {
+  color: #f7f7f7;
+}
+
+/* GENERAL STYLE */
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  color: #f7f7f7;
+  letter-spacing: -0.5px;
+}
+
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+  margin: 0;
+  padding: 0px 0px 50px 0px;
+  font-size: 50px;
+}
+
+p {
+  font-size: 24px;
+}
+
+.body-div {
+    overflow-x: hidden;
+}
+
+.body {
+    height: 100vh;
+}
+
+#skrollr-body {
+  height: auto;
+}
+
+.hero {
+  background: rgb(1,16,24);
+  display: block;
+  position: relative;
+}
+
+.hero .container {
+  padding-top: 200px;
+}
+
+.hacktx-title {
+    font-size: 10em;
+    text-shadow: -8px 0px #f04650 !important;
+    letter-spacing: 5px;
+}
+
+.email {
+  background: none;
+  border: 4px solid #f7f7f7;
+  border-radius: 0;
+  color: #f7f7f7;
+  text-shadow: 1px 1px rgba(0,0,0,.1);
+  font-size: 16px;
+  padding: 14px;
+}
+
+.submit {
+  background: #f7f7f7;
+  border: none;
+  border-radius: 0;
+  color: rgb(126,211,242);
+  font-size: 16px;
+  padding: 18px 5px;
+}
+
+.form {
+  margin-top: 100px;
+  padding: 0 38px;
+}
+
+.hero-image {
+  margin-top: 15vh;
+}
+
+.hero-info {
+  color: #f7f7f7;
+  text-shadow: 1px 1px rgba(0,0,0,.2);
+  margin-top: 20px;
+}
+
+.about-info p,
+.hero-info h1 {
+  text-shadow: 1px 1px rgba(0,0,0,1);
+}
+
+h3.hero-info{
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -1.13px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.clouds {
+  height: 0;
+  width: 100vw;
+}
+
+#capitol {
+  top: -250px;
+  position: relative;
+  margin: auto;
+  display: block;
+}
+
+#cloud1,
+#cloud2,
+#cloud3,
+#cloud4 {
+  position: absolute;
+}
+
+#cloud1 {
+  top: 20%;
+  left: 4%;
+  width: 100px;
+}
+
+#cloud2 {
+  top: 20%;
+  right: 10%;
+  width: 90px;
+}
+
+#cloud3 {
+  top: 10%;
+  right: 25%;
+  width: 68px;
+  opacity: .95;
+}
+
+#cloud4 {
+  top: 5%;
+  left: 21%;
+  width: 46px;
+  opacity: .90;
+}
+
+/* ABOUT SECTION */
+
+.about {
+  background: rgb(1,16,24);
+}
+
+.about-info {
+  text-align:center;
+}
+
+.about-info p {
+  color: #ffffff;
+  padding-top: 10px;
+  line-height: 45px;
+  text-align: left;
+  font-weight: 300;
+}
+
+.about-info p b {
+  color: #f04650;
+}
+
+.about-info h2 {
+  display: inline;
+}
+
+.typed-title {
+  color: #96211A;
+}
+
+/* SCHEDULE SECTION */
+
+.chart-row {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.hackathon-data {
+  background: #f04650;
+  line-height: 50px;
+}
+
+.hacktx-info h4,
+.hackathon-data h4 {
+  color: #15323C;
+  font-size: 31px;
+  font-weight: bold;
+  margin: 30px;
+  text-align: center;
+}
+
+.hacktx-data {
+  background: #1C67CA;
+  line-height: 50px;
+}
+
+/* FAQ SECTION */
+
+.social-media {
+  background: #5AD286;
+}
+
+.social-media-info {
+  margin-bottom: 100px;
+}
+
+/* OUTRO SECTION */
+
+.quote {
+    display: inline-block;
+    text-align: center;
+    margin: 40px;
+}
+
+.quote h2 {
+    font-weight: 100;
+    font-size: 2em;
+    font-style: italic;
+    padding: 0;
+}
+
+.quote h3 {
+    font-weight: 500;
+    font-size: 1.5em;
+    font-style: italic;
+    padding-right: 0.5em;
+    color: #5AD286;
+}
+
+.outro {
+  background: #ffffff;
+}
+
+
+.outro-info p, .outro-info p b {
+  color: rgb(81,80,78);
+}
+.outro-info h2 {
+  color: #51504E;
+}
+
+.outro-info p {
+  text-align: justify;
+  padding-top: 2em;
+}
+
+.outro-info .row {
+  min-height: 10em;
+  vertical-align: middle;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+  background: #47b871;
+}
+
+.contact-love {
+  text-align: center;
+  font-size: 17px;
+}
+
+.contact-detail {
+  text-align: center;
+  color: rgb(0,100,0);
+  font-size: 12px;
+}
+
+.contact-social {
+  text-align: center;
+}
+
+.contact-social i {
+  padding: 5px;
+}
+
+.hackathon-data .container,
+.hacktx-data .container,
+.about .container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.social-media .container {
+  padding-bottom: 100px;
+}
+
+.outro .container {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.chair {
+  position: relative;
+  display: inline-block;
+
+}
+
+.chair img {
+  width: 32%;
+  margin-top: -260px;
+  display: block;
+}
+
+.contact .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.skyline,
+.bridge,
+.hills,
+.grass {
+  z-index: 0;
+}
+
+.skyline {
+  width: 100%;
+  bottom: 0;
+}
+
+.bats {
+  position: relative;
+  bottom: 0;
+  left: 70%;
+}
+
+.bats img {
+  width: 12vw;
+  padding-bottom: 2vh;
+}
+
+.hills {
+  bottom: 0;
+}
+
+.grass {
+  bottom: 0;
+}
+
+.hills img,
+.skyline img,
+.grass img {
+  width: 100%;
+}
+
+.grass img {
+  position: absolute;
+  bottom: 0;
+}
+
+.about-info h2,
+.schedule-info h2,
+.hacktx-data-info h2,
+.social-media-info h2,
+.outro-info h2,
+.contact-info h2{
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px rgba(0,0,0,.1);
+}
+
+@media (max-width: 768px) {
+  .hack-title {
+    margin:auto;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 466px) {
+
+  .hero-info {
+    text-align: center;
+  }
+
+  h2.location,
+  h2.date {
+    float: none;
+  }
+
+  .about-info p {
+    line-height: 30px;
+    font-size: 20px;
+  }
+
+  .schedule-time p,
+  .schedule-detail p {
+    line-height: 35px;
+  }
+}

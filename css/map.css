@@ -1,0 +1,122 @@
+html, body, #map {
+    width:100%;
+    height:100%;
+    padding: 0;
+    margin: 0;
+}
+
+#map {
+    position: relative;
+}
+
+.leaflet-container {
+    background: rgb(1, 16, 24);
+}
+
+div.cartodb-timeslider .slider-wrapper {
+    width: 300px;
+}
+
+/* Year selector */
+#menu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 400px;
+    height:60px;
+    background: transparent;
+    z-index:10;
+}
+
+#menu a {
+    margin: 15px 10px 0 0;
+    float: right;
+    vertical-align: baseline;
+    width: 70px;
+    padding: 10px;
+    text-align: center;
+    font: bold 11px "Helvetica",Arial;
+    line-height: normal;
+    color: #555;
+    border-radius: 4px;
+    border: 1px solid #777777;
+    background: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#menu a.selected,
+#menu a:hover {
+    color: #F84F40;
+}
+
+/* Layer Selector */
+#layer_selector {
+    position: absolute;
+    top: 165px;
+    right: 20px;
+    padding: 0;
+    z-index: 10;
+}
+
+#layer_selector ul {
+    padding: 0; margin: 0;
+    list-style-type: none;
+}
+
+#layer_selector li {
+    border-bottom: 1px solid #999;
+    padding: 15px 30px;
+    font-family: "Helvetica", Arial;
+    font-size: 13px;
+    color: #444;
+    cursor: pointer;
+}
+
+#layer_selector li.selected,
+#layer_selector li:hover {
+    color: #F84F40;
+}
+
+/* Infowindow */
+.info-row:hover {
+    color: #F84F40;
+    cursor: pointer;
+}
+
+.hackathon_info {
+    transition: display 1s linear;
+}
+
+.hackathon_info h4 {
+    color: #F84F40 !important;
+}
+
+a.cartodb-popup-back-button {
+    left: -12px;
+    top: -12px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(0,0,0,.15);
+    position: absolute;
+    padding: 0;
+    color: #0078A8;
+    text-decoration: none;
+    text-align: center;
+}
+
+.leaflet-container img.info_image {
+    width:auto;
+    height:auto;
+    max-height:190px;
+    max-width:190px !important;
+    margin-bottom:4px;
+}
+
+.close, .back {
+    cursor: pointer;
+}
