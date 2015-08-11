@@ -68,10 +68,6 @@ p {
   position: relative;
 }
 
-.hero .container {
-  padding-top: 200px;
-}
-
 .hacktx-title {
     font-size: 10em;
     text-shadow: -8px 0px #f04650 !important;
@@ -104,9 +100,6 @@ p {
 
 .hero-image {
   margin-top: 15vh;
-}
-
-.hero-info {
   color: #f7f7f7;
   text-shadow: 1px 1px rgba(0,0,0,.2);
   margin-top: 20px;

@@ -1,6 +1,11 @@
 #monthly-hackathons .chart rect {
-    fill: rgb(6,40,63);
+    //fill: rgb(6,40,63);
 }
+
+#monthly-hackathons .chart rect:hover {
+    fill: rgb(0,0,0);
+}
+
 #monthly-hackathons .chart text {
     fill: white;
     font: 10px sans-serif;
@@ -16,4 +21,35 @@
 #monthly-hackathons {
     position:relative;
     margin-bottom:420px;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(1,16,24, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  text-align: center;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:before {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  background: transparent;
+  content: "\25B2";
+  position: absolute;
+  text-align: center;
+  margin: -1px 0 0 0;
+  left: 0;
+  top: -2em;
+}
+
+.d3-tip h1 {
+    padding:0;
+    margin:0;
 }
