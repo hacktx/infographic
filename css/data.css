@@ -1,11 +1,3 @@
-#monthly-hackathons .chart rect {
-    //fill: rgb(6,40,63);
-}
-
-#monthly-hackathons .chart rect:hover {
-    fill: rgb(0,0,0);
-}
-
 #monthly-hackathons .chart text {
     fill: white;
     font: 10px sans-serif;
@@ -52,4 +44,17 @@
 .d3-tip h1 {
     padding:0;
     margin:0;
+}
+
+.circle {
+    display:inline-block;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    font-size:50px;
+    color:#fff;
+    background:rgb(4, 48,64);
+    padding-top:25px;
+    text-align:center;
+    margin:10px;
 }

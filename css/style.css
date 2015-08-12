@@ -300,15 +300,19 @@ h3.hero-info{
   padding: 5px;
 }
 
-.hackathon-data .container,
-.hacktx-data .container,
 .about .container {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
-.social-media .container {
-  padding-bottom: 100px;
+.hacktx-data .container {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.hackathon-data .container {
+    padding-top: 40px;
+    padding-bottom: 80px;
 }
 
 .outro .container {
