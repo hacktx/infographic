@@ -233,16 +233,24 @@ h3.hero-info{
 /* OUTRO SECTION */
 
 .quote {
-    display: inline-block;
+    display: block;
     text-align: center;
-    margin: 40px;
+    margin: 40px;    
+}
+
+.quote a {
+    color: inherit;
 }
 
 .quote h2 {
     font-weight: 100;
     font-size: 2em;
-    font-style: italic;
     padding: 0;
+    line-height: 50px;
+}
+
+.outro .quote h2 {
+    font-style: italic;
 }
 
 .quote h3 {
