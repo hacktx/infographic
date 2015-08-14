@@ -29,7 +29,6 @@
         .attr("id", "drop-shadow")
         .attr("height", "110%");
 
-
     // SourceAlpha refers to opacity of graphic that this filter will be applied to
     // convolve that with a Gaussian with standard deviation 3 and store result
     // in blur

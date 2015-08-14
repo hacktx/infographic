@@ -58,3 +58,10 @@
     text-align:center;
     margin:10px;
 }
+
+/* First-time hackers */
+
+#first-time-hackers .chart {
+    margin-left: 3em;
+    margin-right: 3em;
+}
