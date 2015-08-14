@@ -230,30 +230,25 @@ h3.hero-info{
   margin-bottom: 100px;
 }
 
-.image-grid-col-2 li {
-    width: 47.5%;
-}
-
-.image-grid-col-3 li {
-    width: 30.83%;
-}
-
-.image-grid-col-2,
-.image-grid-col-3 {
+.twitter-grid {
     list-style: none;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.image-grid-col-2 li,
-.image-grid-col-3 li {
-    display: inline-block;
-    margin: 0 5px 10px;
+.twitter-grid li,
+.twitter-grid li {    
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
 }
 
-.image-grid-col-2 img,
-.image-grid-col-3 img {
+.image-grid img {
     max-width: 100%;
     border-radius: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 /* OUTRO SECTION */
@@ -347,6 +342,10 @@ h3.hero-info{
 .hackathon-data .container {
     padding-top: 40px;
     padding-bottom: 80px;
+}
+
+.social-media .container {
+    padding-top: 80px;
 }
 
 .outro .container {
