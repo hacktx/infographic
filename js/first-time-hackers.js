@@ -3,7 +3,8 @@
         h = 210,
         r = 100,
         inner_r = 20,
-        color = d3.scale.category20c();     //builtin range of colors
+        color = d3.scale.category20c(),     //builtin range of colors
+        highlight = ["#53a4df", "#8dd0f8", "#afdbf2", "#d7ecff", "#f8772f"];
 
     function midAngle(d){
         return d.startAngle + (d.endAngle - d.startAngle)/2;
@@ -74,6 +75,8 @@
     arcs.append("svg:path")
         .style("filter", "url(#drop-shadow-2-2)")
         .attr("fill", function(d, i) { return color(i); } )
+        .on("mouseover", function(d, i) { d3.select(this).attr("fill", highlight[i]) })
+        .on("mouseout", function(d, i) { d3.select(this).attr("fill", color(i)) })
         .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
 
     /*

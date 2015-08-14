@@ -4,6 +4,7 @@
     var height = 420;
     var page_width = 0;
     var year_colors = ["rgb(255,255,255)", "rgb(29,116,176)", "rgb(28,135,2)", "rgb(230,195,0)", "rgb(211,22,18)"];
+    var highlights = ["rgb(255,255,255)", "rgb(69, 156, 216)", "rgb(68, 175, 42)", "rgb(255, 235,40)", "rgb(251,62,58)"];
 
     var x = d3.scale.ordinal()
         .rangeRoundBands([0, page_width], 0);
@@ -71,6 +72,14 @@
            .attr("width", x.rangeBand());
     }
 
+    function get_color(d) {
+        return year_colors[parseInt(d.date.substr(d.date.length - 4, d.date.length) - 2011)];
+    }
+
+    function get_highlight(d) {
+        return highlights[parseInt(d.date.substr(d.date.length - 4, d.date.length) - 2011)];
+    }
+
     d3.csv("data/monthly-hackathons.csv", function(error, data) {
         resize();
         x.domain(data.map(function(d) { return d.date; }));
@@ -80,13 +89,13 @@
             .data(data)
             .enter().append("g")
             .attr("transform", function(d) { return "translate(" + x(d.date) + ",0)"; })
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
+            .on('mouseover', function(d) { d3.select(this).select("rect").style("fill", get_highlight(d)); tip.show(d) })
+            .on('mouseout', function(d) { d3.select(this).select("rect").style("fill", get_color(d)); tip.hide(d) })
 
         bar.append("rect")
         //.attr("y", function(d) { return y(d.value); })
             .attr("height", function(d) { return height - y(d.value); })
-            .style("fill", function(d) { return year_colors[parseInt(d.date.substr(d.date.length - 4, d.date.length) - 2011)]; })
+            .style("fill", function(d) { return get_color(d); })
             .style("filter", "url(#drop-shadow)")
             .attr("width", x.rangeBand());
 
