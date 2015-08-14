@@ -63,5 +63,13 @@
 
 #first-time-hackers .chart {
     margin-left: 3em;
-    margin-right: 3em;
+    float: right;
+    padding-left: 100px;
+}
+
+#first-time-hackers polyline {
+    opacity: .5;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
 }

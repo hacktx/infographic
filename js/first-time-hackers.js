@@ -1,13 +1,19 @@
 (function(window) {
-    var w = 210,
+    var w = 400,
         h = 210,
         r = 100,
         inner_r = 20,
         color = d3.scale.category20c();     //builtin range of colors
 
-    var data = [{"label":"one", "value":20},
-                {"label":"two", "value":50},
-                {"label":"three", "value":30}];
+    function midAngle(d){
+        return d.startAngle + (d.endAngle - d.startAngle)/2;
+    }
+
+    var data = [{"label":"Freshmen", "value":22.15},
+                {"label":"Sophomores", "value":24.92},
+                {"label":"Juniors", "value":22.46},
+                {"label":"Seniors", "value":21.38},
+                {"label":"Grad Students", "value":9.08}];
 
     var chart = d3.select("#first-time-hackers .chart")
         .data([data])
@@ -15,6 +21,8 @@
         .attr("height", h)
         .append("svg:g")                //make a group to hold our pie chart
         .attr("transform", "translate(" + r + "," + r + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+    // Generate drop shadow filter
 
     var defs = chart.append("defs");
     var filter = defs.append("filter")
@@ -46,11 +54,16 @@
         .attr("in", "SourceGraphic");
 
     var arc = d3.svg.arc()
-        .outerRadius(r)
-        .innerRadius(inner_r);
+        .outerRadius(r * 0.8)
+        .innerRadius(inner_r * 0.8);
+
+    var outerArc = d3.svg.arc()
+        .innerRadius(r * 0.9)
+        .outerRadius(r * 0.9);
 
     var pie = d3.layout.pie()
-        .value(function(d) { return d.value; });
+        .value(function(d) { return d.value; })
+        .sort(null);
 
     var arcs = chart.selectAll("g.slice")
         .data(pie)
@@ -63,6 +76,7 @@
         .attr("fill", function(d, i) { return color(i); } )
         .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
 
+    /*
     arcs.append("svg:text")                                     //add a label to each slice
         .attr("transform", function(d) {                    //set the label's origin to the center of the arc
             //we have to make sure to set these before calling arc.centroid
@@ -72,4 +86,31 @@
         })
         .attr("text-anchor", "middle")                          //center the text on it's origin
         .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+    */
+
+    var class_labels = chart.selectAll("g.text")
+        .data(pie)
+        .enter()
+        .append("text")
+        .attr("dy", ".35em")
+        .text(function(d) { return d.data.label; })
+        .attr("transform", function(d) {
+            var pos = outerArc.centroid(d);
+            pos[0] = r * (midAngle(d) < Math.PI ? 1 : -1);
+            return "translate("+ pos +")";
+        })
+        .style("text-anchor", function(d) {
+            return midAngle(d) < Math.PI ? "start":"end";
+        });
+
+    var polylines = chart.selectAll("g.polyline")
+        .data(pie)
+        .enter()
+        .append("polyline")
+        .attr("points", function(d) {
+            var pos = outerArc.centroid(d);
+            pos[0] = r * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+            return [arc.centroid(d), outerArc.centroid(d), pos];
+        });
+
 })(window);
