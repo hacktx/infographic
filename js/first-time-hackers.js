@@ -75,11 +75,16 @@
     arcs.append("svg:path")
         .style("filter", "url(#drop-shadow-2-2)")
         .attr("fill", function(d, i) { return color(i); } )
-        .on("mouseover", function(d, i) { d3.select(this).attr("fill", highlight[i]) })
-        .on("mouseout", function(d, i) { d3.select(this).attr("fill", color(i)) })
+        .on("mouseover", function(d, i) { 
+            d3.select(this).attr("fill", highlight[i]);
+            d3.select(this.parentNode).select("text").attr("visibility", "visible");
+        })
+        .on("mouseout", function(d, i) { 
+            d3.select(this).attr("fill", color(i));
+            d3.select(this.parentNode).select("text").attr("visibility", "hidden");
+        })
         .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
 
-    /*
     arcs.append("svg:text")                                     //add a label to each slice
         .attr("transform", function(d) {                    //set the label's origin to the center of the arc
             //we have to make sure to set these before calling arc.centroid
@@ -88,8 +93,18 @@
             return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
         })
         .attr("text-anchor", "middle")                          //center the text on it's origin
-        .text(function(d, i) { return data[i].label; });        //get the label from our original data array
-    */
+        .attr("visibility", "hidden")
+        .attr("dy", "2em")
+        .attr("transform", function(d) {
+            var pos = outerArc.centroid(d);
+            pos[0] = r * (midAngle(d) < Math.PI ? 1 : -1);
+            return "translate("+ pos +")";
+        })        
+        .style("text-anchor", function(d) {
+            return midAngle(d) < Math.PI ? "start":"end";
+        })
+        .attr("fill", "white")
+        .text(function(d, i) { return data[i].value + "%"; });        //get the label from our original data array
 
     var class_labels = chart.selectAll("g.text")
         .data(pie)
