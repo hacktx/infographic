@@ -67,9 +67,26 @@
     padding-left: 100px;
 }
 
-#first-time-hackers polyline {
+/* Year Distribution */
+
+#year-distribution .chart {
+    float: left;
+    padding-left: 100px;
+}
+
+polyline {
     opacity: .5;
     stroke: black;
     stroke-width: 2px;
     fill: none;
+}
+
+#university-count .circle {
+    width: 180px;
+    height: 180px;
+    padding-top:40px;
+}
+
+#university-count .circle:hover {
+    background: rgb(220, 45, 60);
 }
