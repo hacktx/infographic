@@ -25,6 +25,7 @@
 
     chart.call(tip);
 
+    // Create drop shadow filter
     var defs = chart.append("defs");
     var filter = defs.append("filter")
         .attr("id", "drop-shadow")
@@ -54,6 +55,8 @@
         .attr("in", "offsetBlur")
     feMerge.append("feMergeNode")
         .attr("in", "SourceGraphic");
+
+    // End drop shadow filter
 
     function resize() {
         var d = document,
@@ -93,25 +96,12 @@
             .on('mouseout', function(d) { d3.select(this).select("rect").style("fill", get_color(d)); tip.hide(d) })
 
         bar.append("rect")
-        //.attr("y", function(d) { return y(d.value); })
             .attr("height", function(d) { return height - y(d.value); })
             .style("fill", function(d) { return get_color(d); })
             .style("filter", "url(#drop-shadow)")
             .attr("width", x.rangeBand());
-
-        /*
-          bar.append("text")
-          .attr("x", x.rangeBand() / 2)
-          .attr("y", function(d) { return height - y(d.value) - 15; })
-          .attr("dy", ".75em")
-          .text(function(d) { return d.value; });*/
     });
 
     d3.select(window).on('resize', resize);
+
 })(window);
-/*
-  function updateWindow() {
-  page_width = w.innerWidth || e.clientWidth || g.clientWidth;
-  chart.attr("width", page_width);
-  }
-*/
