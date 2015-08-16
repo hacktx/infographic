@@ -253,6 +253,10 @@ h3.hero-info{
   margin-bottom: 100px;
 }
 
+.social-media-info h2 {
+  margin-bottom: 40px;
+}
+
 .twitter-grid {
     list-style: none;
     text-align: center;
@@ -267,11 +271,16 @@ h3.hero-info{
     justify-content: center;
 }
 
+.image-grid .col-sm-6,
+.image-grid .col-xs-10 {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
 .image-grid img {
     max-width: 100%;
-    border-radius: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 /* OUTRO SECTION */
