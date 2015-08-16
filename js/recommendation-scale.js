@@ -3,8 +3,8 @@
 (function(window) {
     var width = $("#recommendation-scale").innerWidth() - 10;
     var height = 300;
-    var year_colors = ["rgb(255,255,255)", "rgb(29,116,176)", "rgb(28,135,2)", "rgb(230,195,0)", "rgb(211,22,18)"];
-    var highlights = ["rgb(255,255,255)", "rgb(69, 156, 216)", "rgb(68, 175, 42)", "rgb(255, 235,40)", "rgb(251,62,58)"];
+    var color = ["#e6550d", "#fd8d3c", "#fdae6b", "#fdd0a2", "#31a354"];
+    var highlight = ["#f8772f", "#ffaf5e", "#ffcf8d", "#fff2c4", "#53c576"];
 
     var data = [{"label": 5, "value": 79.88},
                 {"label": 4, "value": 17.16},
@@ -33,7 +33,7 @@
     // in blur
     filter.append("feGaussianBlur")
         .attr("in", "SourceAlpha")
-        .attr("stdDeviation", 0)
+        .attr("stdDeviation", 2)
         .attr("result", "blur");
 
     // translate output of Gaussian blur to the right and downwards with 2px
@@ -41,7 +41,7 @@
     filter.append("feOffset")
         .attr("in", "blur")
         .attr("dx", 0)
-        .attr("dy", -5)
+        .attr("dy", 0)
         .attr("result", "offsetBlur");
 
     // overlay original SourceGraphic over translated blurred opacity by using
@@ -69,11 +69,11 @@
     }
 
     function get_color(d) {
-        return year_colors[parseInt(d.label) - 2]
+        return color[3 - (parseInt(d.label) - 2)];
     }
 
     function get_highlight(d) {
-        return highlights[parseInt(d.label) - 2]
+        return highlight[3 - (parseInt(d.label) - 2)]
     }
 
     x.domain([0, d3.max(data, function(d) { return d.value; })]);
