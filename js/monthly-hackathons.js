@@ -42,7 +42,7 @@
     // translate output of Gaussian blur to the right and downwards with 2px
     // store result in offsetBlur
     filter.append("feOffset")
-        .attr("in", "blur")    
+        .attr("in", "blur")
         .attr("dx", -5)
         .attr("dy", 0)
         .attr("result", "offsetBlur");
@@ -62,7 +62,7 @@
         var d = document,
         e = d.documentElement,
         g = d.getElementsByTagName('body')[0],
-        page_width = (window.innerWidth || e.clientWidth || g.clientWidth) - 20;
+        page_width = (window.innerWidth || e.clientWidth || g.clientWidth) - 10;
 
         chart.attr("width", page_width).attr("height", height);
         x.rangeRoundBands([0, page_width], 0);
@@ -72,7 +72,7 @@
             .attr("transform", function(d) { return "translate(" + x(d.date) + ",0)"; });
 
         bar.selectAll("rect")
-           .attr("width", x.rangeBand());
+            .attr("width", x.rangeBand());
     }
 
     function get_color(d) {
@@ -102,6 +102,5 @@
             .attr("width", x.rangeBand());
     });
 
-    d3.select(window).on('resize', resize);
-
+    d3.select(window).on('resize.mh', resize);
 })(window);
