@@ -211,6 +211,7 @@ h3.hero-info{
     #first-time-hackers .chart,
     #year-distribution .chart {
         float: none;
+        margin-left: 0;
     }
 }
 
@@ -234,7 +235,7 @@ h3.hero-info{
 }
 
 .hacktx-data a {
-    color: white;
+    color: #BDBDBD;
 }
 
 .hacktx-data a:hover {

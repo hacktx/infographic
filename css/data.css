@@ -59,6 +59,38 @@
     margin:10px;
 }
 
+.stat {
+    font-size:50px;
+    color:#fff;
+    text-align:center;
+
+}
+
+a .stat:hover {
+    background: #f04650;
+}
+
+#attendance-growth {
+    padding-top: 30px;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+
+#attendance-growth .col-sm-3,
+#attendance-growth .col-xs-6 {
+    text-align: center;
+}
+
+#project-growth .stat {
+    display:inline-block;
+    width:150px;
+    padding-top:10px;
+    margin:10px;
+    margin-bottom:0;
+    border-radius:10px;
+
+}
+
 /* First-time hackers */
 
 #first-time-hackers .chart {
@@ -89,4 +121,13 @@ polyline {
 
 #university-count .circle:hover {
     background: rgb(220, 45, 60);
+}
+
+/* Attendance */
+
+.hacktx-data .fa {
+    font-size: 82px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
