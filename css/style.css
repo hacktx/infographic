@@ -358,6 +358,13 @@ h3.hero-info{
   vertical-align: middle;
 }
 
+p.image-links {
+  text-align: right;
+  font-size: 1em;
+  margin-top:0;
+  padding-top:0;
+}
+
 /* CONTACT SECTION */
 
 .contact {
