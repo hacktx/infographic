@@ -230,6 +230,11 @@ h3.hero-info{
   line-height: 50px;
 }
 
+.hackathon-data p {
+  padding-bottom:2em;
+  text-align:justify;
+}
+
 .hacktx-info h4,
 .hackathon-data h4 {
   color: #15323C;
