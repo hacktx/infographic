@@ -136,4 +136,55 @@
             return [arc.centroid(d), outerArc.centroid(d), pos];
         });
 
+    function resize() {
+        var d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        page_width = (window.innerWidth || e.clientWidth || g.clientWidth) - 10;
+
+        w = Math.min(page_width - 100, 400);
+        h = (w / 2) + 10;
+        r = (h - 10) / 2;
+        inner_r = r / 5;
+
+        chart.attr("width", w)
+            .attr("height", h)
+            .attr("transform", "translate(" + r + "," + r + ")");
+
+        d3.select("#year-distribution .chart")
+          .attr("width", w + r)
+          .attr("height", h);
+        
+        arc.outerRadius(r * 0.8)
+            .innerRadius(inner_r * 0.8);
+
+        outerArc.innerRadius(r * 0.9)
+            .outerRadius(r * 0.9);
+
+        arcs.selectAll("path").attr("d", arc);
+        arcs.selectAll("text").attr("transform", function(d) {
+            // Move it outside of the pie graph
+            var pos = outerArc.centroid(d);
+            pos[0] = r * (midAngle(d) < Math.PI ? 1 : -1);
+            return "translate("+ pos +")";
+        })
+
+        chart.selectAll("text")
+            .attr("transform", function(d) {
+                var pos = outerArc.centroid(d);
+                pos[0] = r * (midAngle(d) < Math.PI ? 1 : -1);
+                return "translate("+ pos +")";
+            })
+
+        chart.selectAll("polyline")
+            .attr("points", function(d) {
+                var pos = outerArc.centroid(d);
+                pos[0] = r * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+                return [arc.centroid(d), outerArc.centroid(d), pos];
+            });
+    }
+
+    resize();
+    d3.select(window).on("resize.yd", resize);
+
 })(window);

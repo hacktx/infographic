@@ -1,10 +1,10 @@
 (function(window) {
     var w = 400,
-        h = 210,
-        r = 100,
-        inner_r = 20,
-        color = d3.scale.category20c(),     //builtin range of colors
-        highlight = ["#53a4df", "#8dd0f8", "#afdbf2", "#d7ecff", "#f8772f"];
+    h = 210,
+    r = 100,
+    inner_r = 20,
+    color = d3.scale.category20c(),     //builtin range of colors
+    highlight = ["#53a4df", "#8dd0f8", "#afdbf2", "#d7ecff", "#f8772f"];
 
     function midAngle(d){
         return d.startAngle + (d.endAngle - d.startAngle)/2;
@@ -40,7 +40,7 @@
     // translate output of Gaussian blur to the right and downwards with 2px
     // store result in offsetBlur
     filter.append("feOffset")
-        .attr("in", "blur")    
+        .attr("in", "blur")
         .attr("dx", 2)
         .attr("dy", 2)
         .attr("result", "offsetBlur");
@@ -82,11 +82,11 @@
     arcs.append("svg:path")
         .style("filter", "url(#drop-shadow-2-2)")
         .attr("fill", function(d, i) { return color(i); } )
-        .on("mouseover", function(d, i) { 
+        .on("mouseover", function(d, i) {
             d3.select(this).attr("fill", highlight[i]);
             d3.select(this.parentNode).select("text").attr("visibility", "visible");
         })
-        .on("mouseout", function(d, i) { 
+        .on("mouseout", function(d, i) {
             d3.select(this).attr("fill", color(i));
             d3.select(this.parentNode).select("text").attr("visibility", "hidden");
         })
@@ -136,4 +136,54 @@
             return [arc.centroid(d), outerArc.centroid(d), pos];
         });
 
+    function resize() {
+        var d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        page_width = (window.innerWidth || e.clientWidth || g.clientWidth) - 10;
+
+        w = Math.min(page_width - 100, 400);
+        h = (w / 2) + 10;
+        r = (h - 10) / 2;
+        inner_r = r / 5;
+
+        chart.attr("width", w)
+            .attr("height", h)
+            .attr("transform", "translate(" + r + "," + r + ")");
+
+        d3.select("#first-time-hackers .chart")
+          .attr("width", w + (w < 400 ? r : 0))
+          .attr("height", h);
+        
+        arc.outerRadius(r * 0.8)
+            .innerRadius(inner_r * 0.8);
+
+        outerArc.innerRadius(r * 0.9)
+            .outerRadius(r * 0.9);
+
+        arcs.selectAll("path").attr("d", arc);
+        arcs.selectAll("text").attr("transform", function(d) {
+            // Move it outside of the pie graph
+            var pos = outerArc.centroid(d);
+            pos[0] = r * (midAngle(d) < Math.PI ? 1 : -1);
+            return "translate("+ pos +")";
+        })
+
+        chart.selectAll("text")
+            .attr("transform", function(d) {
+                var pos = outerArc.centroid(d);
+                pos[0] = r * (midAngle(d) < Math.PI ? 1 : -1);
+                return "translate("+ pos +")";
+            })
+
+        chart.selectAll("polyline")
+            .attr("points", function(d) {
+                var pos = outerArc.centroid(d);
+                pos[0] = r * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+                return [arc.centroid(d), outerArc.centroid(d), pos];
+            });
+    }
+
+    resize();
+    d3.select(window).on("resize.fth", resize);
 })(window);
