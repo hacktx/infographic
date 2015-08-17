@@ -135,13 +135,13 @@ polyline {
     text-align:center;
     margin:10px;
     margin-left: -20px;
-    background-image: url("/images/texas.png");
+    background-image: url("../images/texas.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .texas:hover {
-    background-image: url("/images/texas-selected.png");
+    background-image: url("../images/texas-selected.png");
 }
 
 /* Recommendation bar chart */
