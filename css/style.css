@@ -175,9 +175,19 @@ h3.hero-info{
 .about-info p {
   color: #ffffff;
   padding-top: 10px;
+}
+
+.about-info p,
+.hackathon-data p,
+.hacktx-data p {
   line-height: 45px;
   text-align: left;
   font-weight: 300;
+}
+
+.hackathon-data p,
+.hacktx-data p {
+  font-size: 1.5em;
 }
 
 .about-info p b {
@@ -478,8 +488,13 @@ h3.hero-info{
   h2.date {
     float: none;
   }
-
-  .about-info p {
+  .about-info p,
+  .hackathon-data p,
+  .hacktx-data p,
+  .social-media p,
+  .outro p {
+    text-align: left;
+    font-weight: 300;
     line-height: 30px;
     font-size: 20px;
   }
