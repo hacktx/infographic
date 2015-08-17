@@ -1,7 +1,7 @@
 // Monthly Hackathons Bar Chart
 
 (function(window) {
-    var width = $("#recommendation-scale").innerWidth() - 10;
+    var width = $("#recommendation-scale").innerWidth() - 40;
     var height = 300;
     var color = ["#e6550d", "#fd8d3c", "#fdae6b", "#fdd0a2", "#31a354"];
     var highlight = ["#f8772f", "#ffaf5e", "#ffcf8d", "#fff2c4", "#53c576"];
@@ -56,7 +56,7 @@
     // End drop shadow filter
 
     function resize() {
-        var width = $("#recommendation-scale").innerWidth() - 10;
+        var width = $("#recommendation-scale").innerWidth() - 40;
         chart.attr("width", width).attr("height", height);
         x.range([0, width]);
         y.rangeRoundBands([height, 0], 0.2);
@@ -65,7 +65,17 @@
             .attr("transform", function(d) { return "translate(0," + y(d.label) + ")"; });
 
         bar.selectAll("rect")
+            .attr("width", function(d) { return (d.label == "5") ? x(d.value) - 32 : x(d.value); })
             .attr("height", y.rangeBand());
+
+        bar.selectAll("text.rating")
+            .attr("dx", -30)
+            .attr("dy", function(d) { return y.rangeBand() / 2 + 10 });
+
+        bar.selectAll("text.percentage")
+            .attr("x", function(d) { return (d.label == "5") ? x(d.value) - 32 : x(d.value); })
+            .attr("dx", function(d) { return (x(d.value) < 70) ? 10 : -55; })
+            .attr("dy", function(d) { return y.rangeBand() - 10; });
     }
 
     function get_color(d) {
@@ -88,10 +98,25 @@
         .on('mouseout', function(d) { d3.select(this).select("rect").style("fill", get_color(d)) })
 
     bar.append("rect")
-        .attr("width", function(d) { return x(d.value); })
+        .attr("width", function(d,i) { return (i == 0) ? x(d.value) - 32 : x(d.value); })
         .style("fill", function(d) { return get_color(d); })
         .style("filter", "url(#drop-shadow-vert)")
         .attr("height", y.rangeBand());
 
+    bar.append("text")
+        .attr("class", "rating")
+        .attr("dx", -30)
+        .attr("dy", function(d) { return y.rangeBand() / 2 + 10 })
+        .text(function(d) { return d.label; })        
+
+    bar.append("text")
+        .attr("class", "percentage")
+        .attr("x", function(d,i) { return (i == 0) ? x(d.value) - 32 : x(d.value); })
+        .attr("dx", function(d,i) { return (x(d.value) < 70) ? 10 : -55; })
+        .attr("dy", function(d) { return y.rangeBand() - 10; })
+        .text(function(d) { return d.value + "%"; })
+
+    resize();
+    
     d3.select(window).on('resize.rs', resize);
 })(window);
