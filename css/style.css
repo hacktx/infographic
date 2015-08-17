@@ -504,7 +504,7 @@ p.image-links {
   .hackathon-data p,
   .hacktx-data p,
   .social-media p,
-  .outro p {
+  .outro p:not(.image-links) {
     text-align: left;
     font-weight: 300;
     line-height: 30px;
