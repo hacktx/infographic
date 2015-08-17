@@ -113,16 +113,6 @@ polyline {
     fill: none;
 }
 
-#university-count .circle {
-    width: 180px;
-    height: 180px;
-    padding-top:40px;
-}
-
-#university-count .circle:hover {
-    background: rgb(220, 45, 60);
-}
-
 /* Attendance */
 
 .hacktx-data .fa {
@@ -130,6 +120,28 @@ polyline {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 20px;
+}
+
+/* University Count */
+
+.texas {
+    width: 270px;
+    height: 270px;
+    padding-top: 70px;
+    padding-left: 40px;
+    display:inline-block;
+    font-size:50px;
+    color:#fff;
+    text-align:center;
+    margin:10px;
+    margin-left: -20px;
+    background-image: url("/images/texas.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.texas:hover {
+    background-image: url("/images/texas-selected.png");
 }
 
 /* Recommendation bar chart */
