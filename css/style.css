@@ -276,6 +276,7 @@ h3.hero-info{
 .social-media p {
   margin-top: 15px;
   text-align: justify;
+  font-weight: 300;
 }
 
 .twitter-grid {
