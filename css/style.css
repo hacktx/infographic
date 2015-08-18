@@ -204,27 +204,6 @@ h3.hero-info{
 
 /* HACKATHON/HACKTX DATA SECTION */
 
-.chart-row {
-    display: flex;
-    align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-@media (max-width: 768px) {
-    .chart-row {
-        display: inline;        
-    }
-    .chart-row p {
-        text-align: left !important; 
-    }
-    #first-time-hackers .chart,
-    #year-distribution .chart {
-        float: none;
-        margin-left: 0;
-    }
-}
-
 .hackathon-data {
   background: #f04650;
   line-height: 50px;
@@ -258,11 +237,6 @@ h3.hero-info{
     text-decoration: underline; 
 }
 
-#first-time-hackers,
-#year-distribution {
-    text-align: center;
-}
-
 /* SOCIAL MEDIA SECTION */
 
 .social-media {
@@ -271,6 +245,11 @@ h3.hero-info{
 
 .social-media-info {
   margin-bottom: 100px;
+}
+
+.social-media-header {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .social-media p {
@@ -284,7 +263,6 @@ h3.hero-info{
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
 }
 
 .twitter-grid li,

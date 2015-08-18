@@ -118,6 +118,20 @@ polyline {
     fill: white;
 }
 
+
+.chart-row {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#first-time-hackers,
+#year-distribution {
+    text-align: center;
+}
+
+
 /* Attendance */
 
 .hacktx-data .fa {
@@ -166,4 +180,21 @@ polyline {
     fill: white;
     font-weight: 500;
     text-shadow: 1px 1px rgba(0,0,0,.1);    
+}
+
+
+@media (max-width: 768px) {
+    .chart-row {
+        display: inline;        
+    }
+    .chart-row p {
+        text-align: left !important; 
+    }
+    #first-time-hackers .chart,
+    #year-distribution .chart {
+        float: none;
+        margin-left: 0;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
 }
