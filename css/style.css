@@ -237,6 +237,11 @@ h3.hero-info{
     text-decoration: underline; 
 }
 
+.hacktx-data .demographics {
+    text-align: justify;
+    margin-top: 20px;
+}
+
 /* SOCIAL MEDIA SECTION */
 
 .social-media {
@@ -479,9 +484,11 @@ p.image-links {
   h2.date {
     float: none;
   }
+
   .about-info p,
   .hackathon-data p,
   .hacktx-data p,
+  .hacktx-data .demographics,
   .social-media p,
   .outro p:not(.image-links) {
     text-align: left;
