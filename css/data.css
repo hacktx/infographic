@@ -108,9 +108,14 @@ a .stat:hover {
 
 polyline {
     opacity: .5;
-    stroke: black;
+    stroke: white;
     stroke-width: 2px;
     fill: none;
+}
+
+#first-time-hackers text,
+#year-distribution text {
+    fill: white;
 }
 
 /* Attendance */
