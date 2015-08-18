@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="2991px" height="756px"
+	 viewBox="0 0 2991 756" enable-background="new 0 0 2991 756" xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="2743.9541" y1="105.2446" x2="2826.5659" y2="22.6328" gradientTransform="matrix(1 0 0 -1 0 757)">
+	<stop  offset="0" style="stop-color:#EC1C24"/>
+	<stop  offset="1" style="stop-color:#A11318"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" d="M2780.493,615.216c9.34,9.339,83.196,83.195,83.196,83.195l-31.385,31.576
+	c-22.973,22.973-60.223,22.973-83.195-0.001c-22.974-22.975-22.975-60.223,0-83.195
+	C2772.083,623.818,2780.493,615.216,2780.493,615.216z"/>
+<path id="Path-Copy-7_2_" fill="#EC1C24" d="M2623.044,294.187L2623,226c0-65,19.313-108.042,43.2-131.8c23.888-23.758,40-40,40-40
+	l-11.656,239.295L2623.044,294.187z"/>
+<title>HACKTX</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="HACKTX" sketch:type="MSLayerGroup">
+		<g id="X" transform="translate(2165.000000, 8.000000)" sketch:type="MSShapeGroup">
+			<path id="Rectangle-20" fill="#EC1C24" d="M8,40L48,0l115,340l-40,40L8,40z"/>
+			<path id="Rectangle-19" fill="#A11318" d="M324,700h116l-40,40H284L324,700z"/>
+			<path id="Rectangle-16" fill="#EC1C24" d="M123,380l40-40L40,700L0,740L123,380z"/>
+			<path id="Rectangle-16-Copy" fill="#EC1C24" d="M290,40l40-40l-85,258l-40,40L290,40z"/>
+			<path id="Rectangle-18" fill="#A11318" d="M40,700h103l-40,40H0L40,700z"/>
+			<path id="Rectangle-21" fill="#EC1C24" d="M194,463l40-40l90,277l-40,40L194,463z"/>
+			<path id="Path" fill="#FFFFFF" d="M330,0l-85,258L162,0H48l115,340L40,700h103l91-277l90,277h116L317,340L432,0H330z"/>
+		</g>
+		<g id="T" transform="translate(1762.000000, 8.000000)" sketch:type="MSShapeGroup">
+			<path id="Rectangle-12" fill="#EC1C24" d="M0,40L40,0v100L0,140V40z"/>
+			<path id="Rectangle-12-Copy" fill="#A11318" d="M40,100h340l-40,40H0L40,100z"/>
+			<path id="Rectangle-12-Copy-2" fill="#A11318" d="M155,700h110l-40,40H115L155,700z"/>
+			<path id="Rectangle-12-Copy-3" fill="#EC1C24" d="M115,140l40-40v600l-40,40V140z"/>
+			<path id="Path_1_" fill="#FFFFFF" d="M40,100h115v600h110V100h115V0H40V100z"/>
+		</g>
+		<g id="K" transform="translate(1340.000000, 8.000000)" sketch:type="MSShapeGroup">
+			<path id="Rectangle-26" fill="#EC1C24" d="M144,461l40-40l107,279l-40,40L144,461z"/>
+			<path id="Rectangle-25" fill="#EC1C24" d="M254,40l40-40L150,305l-40,40L254,40z"/>
+			<path id="Rectangle-23" fill="#A11318" d="M40,700h110l-40,40H0L40,700z"/>
+			<path id="Rectangle-23-Copy" fill="#A11318" d="M291,700h113l-40,40H251L291,700z"/>
+			<path id="Rectangle-22" fill="#EC1C24" d="M0,40L40,0v700L0,740V40z"/>
+			<path id="Path_2_" fill="#FFFFFF" d="M291,700h113L251,312L404,0H294L150,305V0H40v700h110V485l34-64L291,700z"/>
+		</g>
+		<g id="C" transform="translate(904.000000, 0.000000)" sketch:type="MSShapeGroup">
+			<path id="Path-Copy-3" fill="#EC1C24" d="M225,487v100c0,50-22,68-57,68s-57-18-57-68c0,0-18.657,110.19,89.343,110.19
+				S265,447,265,447L225,487z"/>
+			<path id="Path-Copy-2" fill="#EC1C24" d="M111,209c0-50,22-69,57-69s57,19,57,69v75l40-40c0,0,48.712-174.189-59.288-174.189
+				S111,209,111,209z"/>
+			<path id="Rectangle-28" fill="#A11318" d="M265,244h104l-40,40H225L265,244z"/>
+			<path id="Path-Copy-7" fill="#EC1C24" d="M1,580V216c0-65,19.313-108.042,43.2-131.8c23.888-23.758,40-40,40-40v534.918L168,655
+				c0,0,169.307,6.148,155.8,18.8c-19.659,19.719-4.773,4.867-40,40C256.438,741.352,216.669,756,165,756C57,756,1,692,1,580z"/>
+			<path id="Path_3_" fill="#FFFFFF" d="M265,447v100c0,50-22,68-57,68s-57-18-57-68V169c0-50,22-69,57-69s57,19,57,69v75h104v-68
+				C369,64,313,0,205,0S41,64,41,176v364c0,112,56,176,164,176s164-64,164-176v-93H265z"/>
+		</g>
+		<g id="A" transform="translate(438.000000, 8.000000)" sketch:type="MSShapeGroup">
+			<path id="Rectangle-7" fill="#A11318" d="M40,700h101l-40,40H0L40,700z"/>
+			<path id="Rectangle-7-Copy" fill="#A11318" d="M314,700h111l-40,40H274L314,700z"/>
+			<path id="Rectangle-10" fill="#EC1C24" d="M187,164l40-40l88,576l-40.5,40L187,164z"/>
+			<path id="Rectangle-11" fill="#A11318" d="M160,573h135l-40,40H120L160,573z"/>
+			<path id="Rectangle-11_1_" fill="#EC1C24" d="M112,40l40-40L40,700L0,740L112,40z"/>
+			<path id="Path_4_" fill="#FFFFFF" d="M313,0H152L40,700h101l19-127h135l19,127h111L313,0z M227,124l53,354H174L227,124z"/>
+		</g>
+		<g id="H" transform="translate(0.000000, 8.000000)" sketch:type="MSShapeGroup">
+			<path id="Rectangle-2-Copy" fill="#EC1C24" d="M235,40l40-40v700l-40,40V40z"/>
+			<path id="Rectangle-3-Copy-2" fill="#A11318" d="M150,400h125l-40,40H110L150,400z"/>
+			<path id="Rectangle-3" fill="#A11318" d="M40,700h110l-40,40H0L40,700z"/>
+			<path id="Rectangle-3-Copy" fill="#A11318" d="M275,700h112l-48,40H235L275,700z"/>
+			<path id="Rectangle-2" fill="#EC1C24" d="M0,40L40,0v700L0,740V40z"/>
+			<path id="Path_5_" fill="#FFFFFF" d="M150,400h125v300h112V0H275v300H150V0H40v700h110V400z"/>
+		</g>
+		<g id="C_1_" transform="translate(904.000000, 0.000000)" sketch:type="MSShapeGroup">
+			<path id="Path-Copy-2_1_" fill="#EC1C24" d="M1822.563,218.5c0-50,22-69,57-69s57,19,57,69c0,0,0-33.165,0,36.417
+				c0,69.083-119.519,14.583-119.519,185.083v112.518l45.036-45.034l-1.443-97.384c0,0,114.863-59.1,116.363-156.1
+				c0,0,48.273-174.689-59.727-174.689S1822.563,218.5,1822.563,218.5z"/>
+			<path id="Path_6_" fill="#FFFFFF" d="M2087,254C2087,142.482,2087,254,2087,254v-68c0-112-56-176-164-176s-164,64-164,176v68h104
+				v-75c0-50,22-69,57-69s57,19,57,69c0,0,0,0.493,0,75c0,69.5-116.363,52-116.363,156.1l1.443,97.384h115.964L1978,410.1
+				C1978,348,2087,371.5,2087,254z"/>
+		</g>
+	</g>
+</g>
+<path fill="#FFFFFF" d="M2605,457"/>
+<path fill="#FFFFFF" d="M2605,457"/>
+<path id="Rectangle-18_1_" fill="#A11318" d="M2663.313,253.917h103.692l-40.269,40.269h-103.693L2663.313,253.917z"/>
+<path id="Rectangle-18_2_" fill="#A11318" d="M2766.08,507.483h115.964l-45.034,45.034h-115.966L2766.08,507.483z"/>
+<path fill="#FFFFFF" d="M2750.904,636.703"/>
+<circle fill="#FFFFFF" cx="2822.092" cy="656.813" r="58.829"/>
+</svg>
