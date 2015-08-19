@@ -109,9 +109,6 @@ cartodb.createVis('map', 'https://kyeah.cartodb.com/api/v2/viz/6f8589b6-2f5a-11e
             $(".info-row").css("display", "block");
             $(".back").css("display", "none");
         });
-
-        sublayers[0].hide();
-        sublayers[2].hide();
     });
 
 $('.button').click(function() {
