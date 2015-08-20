@@ -143,8 +143,8 @@
         page_width = (window.innerWidth || e.clientWidth || g.clientWidth) - 10;
 
         w = Math.min(page_width - 100, 400);
-        h = (w / 2) + 10;
-        r = (h - 10) / 2;
+        h = (w / 2) + 25;
+        r = (h - 25) / 2;
         inner_r = r / 5;
 
         chart.attr("width", w)
@@ -152,7 +152,7 @@
             .attr("transform", "translate(" + r + "," + r + ")");
 
         d3.select("#year-distribution .chart")
-          .attr("width", w + r)
+          .attr("width", w + (w < 400 ? r : 0))
           .attr("height", h);
         
         arc.outerRadius(r * 0.8)
