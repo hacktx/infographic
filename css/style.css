@@ -181,7 +181,7 @@ h3.hero-info{
 .hackathon-data p,
 .hacktx-data p {
   line-height: 45px;
-  text-align: left;
+  text-align: justify;
   font-weight: 300;
 }
 
