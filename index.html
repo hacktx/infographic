@@ -10,6 +10,7 @@
     <link href="css/cloud-style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/map.css" />
     <link href="css/data.css" rel="stylesheet">
+    <link href="css/waypoints.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
@@ -141,7 +142,7 @@
               <a href="https://www.hackerleague.org/hackathons/hacktx/hacks"><div class="stat"><strong style="color:rgb(230,195,0)">36</strong><div style="font-size: 20px">in 2013</div></div></a>
               <a href="https://www.hackerleague.org/hackathons/hacktx-2014/hacks"><div class="stat"><strong style="color:rgb(211,22,18)">104</strong><div style="font-size: 20px">in 2014</div></div></a>
               <hr/>
-              <h2 style="padding-bottom:20px">Submitted projects on Hacker League</h2>
+              <h2 class="fadein" style="padding-bottom:20px">Submitted projects on Hacker League</h2>
             </div>
           </div>
           <div class="chart-row">
@@ -174,31 +175,31 @@
           <div class="chart-row" style="margin-top:0;padding-top:0">
             <div class="col-xs-12" style="text-align: center">
               <hr/>
-              <h2 style="padding-bottom:20px">HackTX Attendees</h2>
+              <h2 class="fadein" style="padding-bottom:20px">HackTX Attendees</h2>
             </div>
           </div>
           <div class="chart-row">
             <p class="col-xs-12">Since our first event in 2012, we have focused on the quality of our event and the satisfaction of every student that walks through our doors. We have maintained the intimacy provided by smaller hackathons and the energy of larger 1,000+ student hackathons, and we hope to continue catering to each of our hackers while engaging them with a diverse community and an infectious attitude for building.</p>
           </div>
           <div class="chart-row">
-            <div id="first-time-hackers" class="col-md-4 col-sm-12">
+            <div id="first-time-hackers" class="fadein fadein-fast col-md-4 col-sm-12">
               <svg class="chart"></svg>
             </div>
             <p class="col-md-8 col-sm-12">Last year, <strong>60 percent</strong> of attendees were first-time hackers. These weren’t just underclassmen — these were freshmen, seniors, and graduate students who had never been encouraged to venture outside of the classroom and apply their knowledge in the real world.</p>
           </div>
           <div class="chart-row">
             <p class="col-md-8 col-sm-12" style="text-align: right">All years were represented in equal portions, with no one class standing out in terms of sheer presence. We reached out across UT and the state of Texas to encourage students from all walks of life to join us, and each student found their niche at HackTX, whether they were first-time builders or nutty masterminds.</p>
-            <div id="year-distribution" class="col-md-4 col-sm-12">
+            <div id="year-distribution" class="fadein fadein-fast col-md-4 col-sm-12">
               <svg class="chart"></svg>
             </div>
           </div>
           <div class="chart-row">
             <div id="university-count" class="col-md-4 col-sm-12" style="text-align: center">
-              <div class="texas"><strong>17</strong><div style="font-size: 20px">universities</div></div>
+              <div class="fadein fadein-fast texas"><strong>17</strong><div style="font-size: 20px">universities</div></div>
             </div>
             <p class="col-md-8 col-sm-12">Attendees came from 17 different universities, traveling from as far north as the University of Michigan and as far south as Tecnológico de Monterrey. We hosted 13 Texas universities and colleges, and our long-term commitment to helping the Texas scene has encouraged both high school and university hackers to host their own hackathons, including <a href="https://sohacks.com/">School’s Out Hackathon</a>, <a href="http://tamuhack.com/">TAMUHack</a>, and <a href="hacktx.github.io/hacktx-15f">HackDFW</a>.</p>
           </div>
-          <div class="row" style="margin-top: 40px">
+          <div class="fadein fadein-fast row" style="margin-top: 40px">
             <div class="col-xs-6">
               <div class="stat" style="float:right"><strong>17.5%</strong><div style="font-size: 20px">Female</div></div>
             </div>
@@ -313,11 +314,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
     <script src="js/animate.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/map.js" defer></script>
     <script src="js/d3-tip.js"></script>
     <script src="js/monthly-hackathons.js" defer></script>
     <script src="js/first-time-hackers.js" defer></script>
     <script src="js/year-distribution.js" defer></script>
     <script src="js/recommendation-scale.js" defer></script>
+    <script src="js/waypoints.js" defer></script>
   </body>
 </html>

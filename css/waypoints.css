@@ -1,0 +1,23 @@
+hr {
+  width: 0%;
+  border-top: 2px solid rgb(238, 238, 238);
+  transition: width 1.5s;
+  -webkit-transition: width 1.5s;
+  -moz-transition: width 1.5s;
+  -o-transition: width 1.5s;
+}
+
+.fadein {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+}
+
+.fadein.fadein-fast {
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+}
