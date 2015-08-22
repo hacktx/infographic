@@ -19,3 +19,12 @@ $('.fadein').waypoint(function( direction ) {
     triggerOnce: false,
     offset: 'bottom-in-view'
 });
+
+$('.fadein-once').waypoint(function( direction ) {
+    if (direction == "down") {
+        $(this.element).css("opacity", "1");
+    }
+}, {
+    triggerOnce: true,
+    offset: 'bottom-in-view'
+});

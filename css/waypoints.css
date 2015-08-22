@@ -7,7 +7,7 @@ hr {
   -o-transition: width 1.5s;
 }
 
-.fadein {
+.fadein, .fadein-once {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
