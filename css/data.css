@@ -62,8 +62,7 @@
 .stat {
     font-size:50px;
     color:#fff;
-    text-align:center;
-
+    text-align:center;    
 }
 
 a .stat:hover {
@@ -71,9 +70,8 @@ a .stat:hover {
 }
 
 #attendance-growth {
-    padding-top: 50px;
     margin-bottom:0;
-    padding-bottom:0;
+    padding-bottom:20px;
 }
 
 #attendance-growth .col-sm-3,
@@ -81,14 +79,17 @@ a .stat:hover {
     text-align: center;
 }
 
+#project-growth {
+    padding-bottom: 20px;
+}
+
 #project-growth .stat {
     display:inline-block;
     width:150px;
     padding-top:10px;
-    margin:10px;
-    margin-bottom:0;
+    margin-left:10px;
+    margin-right:10px;
     border-radius:10px;
-
 }
 
 /* First-time hackers */
