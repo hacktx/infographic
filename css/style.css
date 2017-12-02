@@ -4,9 +4,9 @@
 */
 
 /* Open Sans Google Font */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,300,600,700);
 
-/* Oswald Google Font */
+/* Robot Condensed Google Font */
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 
 /* Montserrat Google Font*/
@@ -31,7 +31,7 @@
 /* GENERAL STYLE */
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Droid Serif', sans-serif;
   color: black;
   letter-spacing: -0.5px;
 }
@@ -102,11 +102,6 @@ p {
   margin-top: 15vh;
   color: black;
   margin-top: 20px;
-}
-
-.about-info p,
-.hero-info h1 {
-  text-shadow: 1px 1px rgba(0,0,0,1);
 }
 
 h3.hero-info{
