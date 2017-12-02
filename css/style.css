@@ -13,26 +13,26 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 ::-webkit-input-placeholder {
-  color: #f7f7f7;
+  color: black;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  color: #f7f7f7;
+  color: black;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-  color: #f7f7f7;
+  color: black;
 }
 
 :-ms-input-placeholder {
-  color: #f7f7f7;
+  color: black;
 }
 
 /* GENERAL STYLE */
 
 * {
   font-family: 'Open Sans', sans-serif;
-  color: #f7f7f7;
+  color: black;
   letter-spacing: -0.5px;
 }
 
@@ -63,14 +63,14 @@ p {
 }
 
 .hero {
-  background: rgb(1,16,24);
+  background: white;
   display: block;
   position: relative;
 }
 
 .hacktx-title {
     font-size: 10em;
-    text-shadow: -8px 0px #f04650 !important;
+    text-shadow: -8px 0px #37bbe4 !important;
     letter-spacing: 5px;
 }
 
@@ -100,8 +100,7 @@ p {
 
 .hero-image {
   margin-top: 15vh;
-  color: #f7f7f7;
-  text-shadow: 1px 1px rgba(0,0,0,.2);
+  color: black;
   margin-top: 20px;
 }
 
@@ -165,7 +164,7 @@ h3.hero-info{
 /* ABOUT SECTION */
 
 .about {
-  background: rgb(1,16,24);
+  background: white
 }
 
 .about-info {
@@ -173,7 +172,7 @@ h3.hero-info{
 }
 
 .about-info p {
-  color: #ffffff;
+  color: black;
   padding-top: 10px;
 }
 
@@ -205,7 +204,7 @@ h3.hero-info{
 /* HACKATHON/HACKTX DATA SECTION */
 
 .hackathon-data {
-  background: #f04650;
+  background: #white;
   line-height: 50px;
 }
 
@@ -224,7 +223,7 @@ h3.hero-info{
 }
 
 .hacktx-data {
-  background: #1C67CA;
+  background: #white;
   line-height: 50px;
 }
 
@@ -234,7 +233,7 @@ h3.hero-info{
 
 .hacktx-data a:hover {
     color: white;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .hacktx-data .demographics {
@@ -245,7 +244,7 @@ h3.hero-info{
 /* SOCIAL MEDIA SECTION */
 
 .social-media {
-  background: #5AD286;
+  background: #white;
 }
 
 .social-media-info {
@@ -271,7 +270,7 @@ h3.hero-info{
 }
 
 .twitter-grid li,
-.twitter-grid li {    
+.twitter-grid li {
     align-self: flex-end;
     display: flex;
     justify-content: center;
@@ -354,7 +353,7 @@ p.image-links {
 /* CONTACT SECTION */
 
 .contact {
-  background: #47b871;
+  background: #white;
 }
 
 .contact-love {
