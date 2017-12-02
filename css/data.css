@@ -53,7 +53,7 @@
     border-radius:50%;
     font-size:50px;
     color:#fff;
-    background:rgb(4, 48,64);
+    background: #e1e0dd;
     padding-top:25px;
     text-align:center;
     margin:10px;
@@ -62,7 +62,7 @@
 .stat {
     font-size:50px;
     color:#fff;
-    text-align:center;    
+    text-align:center;
 }
 
 a .stat:hover {
@@ -174,22 +174,22 @@ polyline {
     fill: white;
     font-size: 20px;
     font-weight: 700;
-    text-shadow: 1px 1px rgba(0,0,0,.1);    
+    text-shadow: 1px 1px rgba(0,0,0,.1);
 }
 
 #recommendation-scale .percentage {
     fill: white;
     font-weight: 500;
-    text-shadow: 1px 1px rgba(0,0,0,.1);    
+    text-shadow: 1px 1px rgba(0,0,0,.1);
 }
 
 
 @media (max-width: 768px) {
     .chart-row {
-        display: inline;        
+        display: inline;
     }
     .chart-row p {
-        text-align: left !important; 
+        text-align: left !important;
     }
     #first-time-hackers .chart,
     #year-distribution .chart {
