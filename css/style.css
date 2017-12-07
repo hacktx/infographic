@@ -158,6 +158,10 @@ h3.hero-info{
 
 /* ABOUT SECTION */
 
+section {
+  margin-bottom: 10vh;
+}
+
 .about {
   background: white
 }
@@ -218,7 +222,7 @@ h3.hero-info{
 }
 
 .hacktx-data {
-  background: #white;
+  background: white;
   line-height: 50px;
 }
 
@@ -497,4 +501,18 @@ p.image-links {
   .schedule-detail p {
     line-height: 35px;
   }
+}
+
+.hack-logo {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.hack-img {
+  display: inline-block;
+  vertical-align: center;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }

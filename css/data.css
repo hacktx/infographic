@@ -149,15 +149,14 @@ polyline {
     height: 270px;
     padding-top: 70px;
     padding-left: 40px;
-    display:inline-block;
+    display:block;
     font-size:50px;
     color:#fff;
     text-align:center;
-    margin:10px;
-    margin-left: -20px;
     background-image: url("../images/texas.png");
     background-size: contain;
     background-repeat: no-repeat;
+    margin: auto;
 }
 
 .texas:hover {
