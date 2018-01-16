@@ -48,7 +48,7 @@ h2 {
 
 h2 b {
   font-family: 'Oswald', sans-serif;
-} 
+}
 h2 span {
   font-family: 'Oswald', sans-serif;
 }
@@ -522,4 +522,26 @@ p.image-links {
   white-space: nowrap;
   margin-top: 5vh;
   margin-bottom: 10vh;
+}
+
+.star-rating .full {
+  color: orange;
+  display: inline-block;
+}
+
+.star-rating .partial {
+  position: relative;
+  display: inline-block;
+}
+
+.star-rating .partial .full {
+  position: absolute;
+}
+
+.star-rating .partial .full div {
+  width: 70%;
+  overflow: hidden;
+  color: inherit !important;
+  /* hides slight render issue due to the star overlap */
+  text-shadow: 0 0 1px white;
 }
